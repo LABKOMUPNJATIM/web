@@ -69,14 +69,10 @@ body{
 /* ================= HERO ================= */
 
 .hero{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:150px 20px 60px;
+  background:
+  linear-gradient(rgba(0,40,90,.4), rgba(0,20,60,.6)),
+  url("../images/nyobaa.jpg");
 
-  background: url("../images/Background.png");
   background-size:cover;
   background-position:center;
 }

@@ -209,4 +209,7 @@ footer{
     height:auto;
   }
 
+    .hero{
+    background-position: top;
+  }
 }

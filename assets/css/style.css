@@ -179,12 +179,34 @@ body{
 
 @media (min-width: 1024px){
   .card-container{
-    grid-template-columns: repeat(3, 1fr);
-    justify-items:center;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
   }
 
   .card{
     max-width:300px;
+  }
+
+  /* baris pertama (3 card) */
+  .card:nth-child(1){
+    grid-column: 2 / span 2;
+  }
+
+  .card:nth-child(2){
+    grid-column: 4 / span 2;
+  }
+
+  .card:nth-child(3){
+    grid-column: 6 / span 2;
+  }
+
+  /* baris kedua (2 card -> CENTER) */
+  .card:nth-child(4){
+    grid-column: 3 / span 2;
+  }
+
+  .card:nth-child(5){
+    grid-column: 5 / span 2;
   }
 }
 
@@ -226,7 +248,7 @@ footer{
 
   .hero{
     padding:130px 15px 80px;
-    background-position:top;
+    background-position:center;
   }
 
   .hero h1{

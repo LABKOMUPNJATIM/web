@@ -9,7 +9,7 @@
 
 body{
   color:white;
-  background:#0a1f44;
+  background:none; /* penting biar ga nutup background */
 }
 
 
@@ -25,8 +25,7 @@ body{
   justify-content:space-between;
   align-items:center;
   z-index:100;
-  background:rgba(0,0,0,0.35);
-  backdrop-filter:blur(10px);
+  background:rgba(0,0,0,0.4);
 }
 
 .logo-area{
@@ -36,10 +35,9 @@ body{
 }
 
 .logo-area img{
-  height:75px;
+  height:70px;
   width:auto;
   object-fit:contain;
-  filter:drop-shadow(0 2px 6px rgba(0,0,0,.4));
 }
 
 .logo-area h2{
@@ -60,16 +58,10 @@ body{
   border-radius:30px;
   font-size:14px;
   font-weight:600;
-  transition:.3s;
-}
-
-.nav-btn:hover{
-  background:white;
-  color:#06204b;
 }
 
 
-/* ================= HERO (BACKGROUND FIXED) ================= */
+/* ================= HERO (BACKGROUND ASLI) ================= */
 
 .hero{
   min-height:100vh;
@@ -80,56 +72,43 @@ body{
   align-items:flex-start;
   text-align:center;
 
-  /* background yang kamu bilang sudah bagus */
-  background:
-  linear-gradient(rgba(0,0,0,.6), rgba(0,20,50,.7)),
-  url("../images/Background.png");
-
+  background-image:url("../images/Background.jpg");
   background-size:cover;
   background-position:center;
-}
-
-.content{
-  max-width:1200px;
-  width:100%;
-  margin:0 auto;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  background-repeat:no-repeat;
 }
 
 
 /* ================= TEXT ================= */
 
 .hero h1{
-  font-size:52px;
+  font-size:50px;
   font-weight:800;
-  letter-spacing:2px;
-  text-transform:uppercase;
   margin-bottom:20px;
 }
 
 .desc{
-  font-size:17px;
+  font-size:16px;
   line-height:1.7;
   max-width:700px;
   margin-bottom:50px;
-  opacity:.95;
 }
 
 
-/* ================= CARD GRID ================= */
+/* ================= CARD ================= */
 
 .card-container{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
   gap:30px;
-  width:100%;
-  margin-top:40px;
+  max-width:1000px;
+  margin:40px auto 0;
 }
 
 .card{
-  background:rgba(0,60,130,.55);
+  width:280px;
+  background:rgba(0,60,130,.6);
   border:1px solid rgba(255,255,255,.2);
   border-radius:20px;
   padding:30px;
@@ -138,76 +117,27 @@ body{
 
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
-
-  transition:.35s ease;
-  backdrop-filter:blur(8px);
-}
-
-.card:hover{
-  transform:translateY(-10px) scale(1.02);
-  background:rgba(0,90,200,.8);
-  box-shadow:0 15px 40px rgba(0,0,0,.4);
+  text-align:center;
 }
 
 .icon{
-  font-size:42px;
+  font-size:40px;
   margin-bottom:15px;
 }
 
 .card h3{
   font-size:18px;
-  font-weight:700;
   margin-bottom:10px;
 }
 
 .card p{
   font-size:14px;
   margin-bottom:15px;
-  opacity:.9;
 }
 
 .card span{
   font-size:13px;
-  font-weight:600;
-  opacity:.95;
-}
-
-
-/* ================= DESKTOP FIX (3 ATAS 2 BAWAH) ================= */
-
-@media (min-width: 1024px){
-  .card-container{
-    grid-template-columns: repeat(6, 1fr);
-    justify-items: center;
-  }
-
-  .card{
-    max-width:300px;
-  }
-
-  /* baris pertama (3 card) */
-  .card:nth-child(1){
-    grid-column: 2 / span 2;
-  }
-
-  .card:nth-child(2){
-    grid-column: 4 / span 2;
-  }
-
-  .card:nth-child(3){
-    grid-column: 6 / span 2;
-  }
-
-  /* baris kedua (2 card -> CENTER) */
-  .card:nth-child(4){
-    grid-column: 3 / span 2;
-  }
-
-  .card:nth-child(5){
-    grid-column: 5 / span 2;
-  }
 }
 
 
@@ -223,7 +153,7 @@ footer{
 
 /* ================= MOBILE ================= */
 
-@media (max-width: 768px){
+@media (max-width:768px){
 
   .navbar{
     padding:12px 15px;
@@ -248,7 +178,7 @@ footer{
 
   .hero{
     padding:130px 15px 80px;
-    background-position:center;
+    background-position:center top; /* biar vertikal */
   }
 
   .hero h1{
@@ -260,7 +190,7 @@ footer{
   }
 
   .card{
-    padding:25px;
+    width:100%;
+    max-width:320px;
   }
-
 }

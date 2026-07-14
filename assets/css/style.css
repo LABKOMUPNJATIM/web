@@ -54,15 +54,17 @@ body{
 }
 
 .nav-btn{
-  color:white;
-  text-decoration:none;
+  background: transparent;   /* WAJIB */
+  color: white;              /* WAJIB */
   border:1.5px solid white;
+
   padding:8px 22px;
   border-radius:30px;
   font-size:14px;
   font-weight:600;
+  cursor:pointer;
 
-  transition: all 0.3s ease; /* WAJIB */
+  transition: all 0.3s ease;
 }
 
 /* HOVER */
@@ -286,4 +288,47 @@ footer{
     background-repeat: no-repeat;
   }
 
+}
+
+.nav-social{
+  position: relative;
+}
+
+/* dropdown box */
+.dropdown{
+  position: absolute;
+  top:120%;
+  right:0;
+
+  background:#041E42;
+  border-radius:10px;
+  padding:8px 0;
+
+  display:none;
+  min-width:160px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* isi dropdown */
+.dropdown a{
+  display:block;
+  padding:10px 20px;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.2s;
+}
+
+.dropdown a:hover{
+  background:rgba(255,255,255,0.1);
+}
+
+/* MUNCUL */
+.nav-social:hover .dropdown{
+  display:block;
+}
+
+.dropdown.show{
+  display:block;
 }

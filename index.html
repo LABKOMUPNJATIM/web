@@ -24,9 +24,16 @@
     </div>
   </div>
 
-  <a href="https://www.instagram.com/labkomtk.upnvjt?igsh=czl6MHFwbGtzZDB0" target="_blank" class="nav-btn">
-  Social Media
-</a>
+  <!-- INI YANG DIGANTI -->
+  <div class="nav-social">
+    <button class="nav-btn">Social Media</button>
+
+    <div class="dropdown">
+      <a href="https://www.instagram.com/labkomtk.upnvjt" target="_blank">Instagram</a>
+      <a href="https://youtube.com" target="_blank">YouTube</a>
+    </div>
+  </div>
+
 </nav>
 
 
@@ -99,6 +106,16 @@
     © 2026 Computer Laboratory Chemical Engineering, UPN "Veteran" East Java.
   </p>
 </footer>
+
+<script>
+  const btn = document.querySelector('.nav-btn');
+  const dropdown = document.querySelector('.dropdown');
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>

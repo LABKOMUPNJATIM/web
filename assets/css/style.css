@@ -277,3 +277,13 @@ footer{
   transform: scale(1.2) rotate(5deg);
 }
 
+@media (max-width:768px){
+
+  .hero{
+    background-image: url("../images/download\ \(13\).jpg"); /* gambar khusus hp */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+}

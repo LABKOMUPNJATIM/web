@@ -184,23 +184,36 @@ footer{
 
   .navbar{
     padding:12px 15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex:1; /* penting biar ambil ruang kiri */
   }
 
   .logo-area img{
-    height:50px;
+    height:45px;
   }
 
   .logo-area h2{
-    font-size:14px;
+    font-size:13px;
+    text-align:left;
   }
 
   .logo-area p{
     font-size:10px;
+    text-align:left;
   }
 
   .nav-btn{
     font-size:12px;
     padding:6px 14px;
+    margin-left:auto; /* dorong ke kanan */
   }
 
   .hero{

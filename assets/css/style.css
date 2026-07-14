@@ -93,7 +93,7 @@ body{
   align-items:flex-start;
   text-align:center;
 
-  background-image:url("../images/download\ lagi\ semoga\ enak.jpg");
+  background-image:url("../images/background_vertikal.jpg");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -282,7 +282,7 @@ footer{
 @media (max-width:768px){
 
   .hero{
-    background-image: url("../images/ini\ buat\ yang\ hp.jpg"); /* gambar khusus hp */
+    background-image: url("../images/background_horizontal.jpg"); /* gambar khusus hp */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
